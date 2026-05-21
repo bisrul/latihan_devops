@@ -23,7 +23,7 @@ jobs:
       run: |
         # Menggunakan format Repo/Image_Name
         # Ganti 'username_anda' dengan username Docker Hub asli Anda
-        DOCKER_REPO="username_anda/analisis-data-app"
+        DOCKER_REPO="bisrulkh/analisis-data-app"
         
         docker build -t $DOCKER_REPO:latest .
         docker push $DOCKER_REPO:latest
