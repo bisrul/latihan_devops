@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: analisis_data
+    environment:
+      - DATA_NILAI=85,90,78,92,88
+    volumes:
+      - ./output:/app/output
+    command: python app.py
+    

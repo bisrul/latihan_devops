@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: analisis-data-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: analisis-data
+          # Ganti dengan nama repository Docker Hub Anda nanti setelah di-push oleh CI/CD
+          image: username_docker_anda/analisis_data:latest 
+          environment:
+            - name: DATA_NILAI
+              value: "85,90,78,92,88"
+      restartPolicy: Never
+  backoffLimit: 2
